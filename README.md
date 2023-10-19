@@ -33,16 +33,6 @@ This project facilitates firmware updates over-the-air (FOTA) for an STM32F103 m
 - **Purpose**: Callback function for Firebase Storage downloads.
 - **Hint**: Provides status updates during file downloads from Firebase Storage.
 
-### `setup()`
-
-- **Purpose**: Initializes necessary components at startup.
-- **Hint**: Sets up WiFi, Firebase, MQTT, and other peripherals for operation.
-
-### `loop()`
-
-- **Purpose**: Main loop for handling tasks.
-- **Hint**: Manages Firebase authentication, initiates firmware updates, and handles MQTT communication.
-
 ---
 
 ## 3. Critical Parts
