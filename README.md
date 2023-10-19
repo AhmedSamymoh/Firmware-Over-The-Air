@@ -1,8 +1,7 @@
-# Firmware-Over-The-Air
 
-# FOTA Project with ESP32 and STM32
+# FOTA Project with ESP32 and STM32F103
 
-This project enables remote firmware updates (FOTA) using ESP32, STM32F103, and Google Firebase. The ESP32 connects to WiFi, downloads bootloader and firmware code, and communicates with the STM32.
+This project enables remote firmware updates (FOTA) using ESP32, STM32F103, and Google Firebase. The ESP32 connects to WiFi, downloads the bootloader and firmware code, and communicates with the STM32.
 
 ## Table of Contents
 
