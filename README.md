@@ -49,7 +49,7 @@ This project facilitates firmware updates over-the-air (FOTA) for an STM32F103 m
 
 - **Code**: 
     ```cpp
-    client.subscribe("/mahmoud/servo");
+    client.subscribe("/FOTA/");
     ```
 - **Explanation**: Subscribes to the MQTT topic for receiving commands.
 
