@@ -85,9 +85,9 @@ This section highlights key components and functionalities in the code.
 Here's how to flash the code and clear it:
 - Insert instructions or explanations as needed.
 - Describe the steps for using the GUI.
-
-<img src="./ESP8266/Supplymentary/GUI.jpg" width="600" alt="GUI Image">
-
+<div style="text-align: right; padding-right: 30px;">
+  <img src="./ESP8266/Supplymentary/GUI.jpg" alt="GUI Image" width="600">
+</div>
 ---
 
 ## 4. How to Use
