@@ -2,6 +2,11 @@
 
 This project enables remote firmware updates (FOTA) using ESP8266, STM32F103, and Google Firebase. The ESP8266 connects to WiFi, downloads the bootloader and firmware code, and communicates with the STM32.
 
+<div style="text-align: right; padding-right: 30px;">
+  <img src="./ESP8266/Supplymentary/Pic.png" alt="digram Image" width="500">
+</div>
+
+
 ## Table of Contents
 
 - [1. Introduction](#1-introduction)
