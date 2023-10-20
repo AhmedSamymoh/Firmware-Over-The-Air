@@ -82,8 +82,6 @@ This section highlights key components and functionalities in the code.
 - **Explanation**: Writes data to flash memory, including address verification and CRC checks.
 
 
-![GUI](./ESP8266/Supplymentary/GUI.jpg)
-
 Here's how to flash the code and clear it:
 - Insert instructions or explanations as needed.
 - Describe the steps for using the GUI.
