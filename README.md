@@ -88,7 +88,6 @@ Here's how to flash the code and clear it:
 <div style="text-align: right; padding-right: 30px;">
   <img src="./ESP8266/Supplymentary/GUI.jpg" alt="GUI Image" width="600">
 </div>
----
 
 ## 4. How to Use
 
