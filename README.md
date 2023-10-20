@@ -17,7 +17,7 @@ This project facilitates firmware updates over-the-air (FOTA) for an STM32F103 m
 
 
 <div style="text-align: right; padding-right: 30px;">
-  <img src="./ESP8266/Supplymentary/digram.jpg" alt="digram Image" width="800">
+  <img src="./ESP8266/Supplymentary/digram.png" alt="digram Image" width="800">
 </div>
 
 
