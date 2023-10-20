@@ -15,9 +15,12 @@ This project enables remote firmware updates (FOTA) using ESP8266, STM32F103, an
 
 This project facilitates firmware updates over-the-air (FOTA) for an STM32F103 microcontroller using an ESP8266 and Google Firebase. Key components include WiFi connectivity, Firebase authentication, and MQTT communication.
 
+
 <div style="text-align: right; padding-right: 30px;">
   <img src="./ESP8266/Supplymentary/digram.jpg" alt="digram Image" width="800">
 </div>
+
+
 
 ## 2. Software Interfaces
 
