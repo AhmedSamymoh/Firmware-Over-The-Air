@@ -1,4 +1,3 @@
-
 # FOTA Project with ESP32 and STM32F103
 
 This project enables remote firmware updates (FOTA) using ESP32, STM32F103, and Google Firebase. The ESP32 connects to WiFi, downloads the bootloader and firmware code, and communicates with the STM32.
@@ -33,6 +32,26 @@ This project facilitates firmware updates over-the-air (FOTA) for an STM32F103 m
 - **Purpose**: Callback function for Firebase Storage downloads.
 - **Hint**: Provides status updates during file downloads from Firebase Storage.
 
+### `Bootloader_Jump_To_Application()`
+
+- **Purpose**: Jumps to the main application in the STM32.
+- **Hint**: Resets and initiates the main application.
+
+### `Bootloader_Erase_Flash(uint8_t *Host_Buffer)`
+
+- **Purpose**: Initiates erasing of flash memory.
+- **Hint**: Receives erase command from the host and performs flash memory erasure.
+
+### `Bootloader_Memory_Write(uint8_t *Host_Buffer)`
+
+- **Purpose**: Writes data to flash memory.
+- **Hint**: Receives data from the host and writes it to flash memory. Address verification and CRC checks are performed.
+
+### `Bootloader_CRC_Verify(uint8_t *pData, uint32_t Data_Len, uint32_t Host_CRC)`
+
+- **Purpose**: Verifies data integrity using CRC.
+- **Hint**: Calculates the CRC of received data and compares it with the CRC sent by the host.
+
 ---
 
 ## 3. Critical Parts
@@ -61,6 +80,30 @@ This project facilitates firmware updates over-the-air (FOTA) for an STM32F103 m
     ```
 - **Explanation**: Initiates the firmware download process from Firebase Storage.
 
+### Main Application Jump
+
+- **Code**: 
+    ```cpp
+    Bootloader_Jump_To_Application();
+    ```
+- **Explanation**: Transitions to the main application code in the STM32.
+
+### Flash Memory Erasure
+
+- **Code**: 
+    ```cpp
+    Bootloader_Erase_Flash(BL_HostBuff);
+    ```
+- **Explanation**: Initiates erasing of flash memory in response to a command from the host.
+
+### Flash Memory Write
+
+- **Code**: 
+    ```cpp
+    Bootloader_Memory_Write(BL_HostBuff);
+    ```
+- **Explanation**: Writes data to flash memory, including address verification and CRC checks.
+
 ---
 
 ## 4. How to Use
@@ -71,4 +114,6 @@ This project facilitates firmware updates over-the-air (FOTA) for an STM32F103 m
 4. Run the code and monitor the serial output for progress updates.
 
 For detailed information on each function, refer to the code comments.
+
+For more details on the bootloader functions, please refer to the code comments and their respective hints provided above.
 
