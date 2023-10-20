@@ -5,7 +5,7 @@ This project enables remote firmware updates (FOTA) using ESP32, STM32F103, and 
 ## Table of Contents
 
 - [1. Introduction](#1-introduction)
-- [2. Functions](#2-functions)
+- [2. Software Interfaces](#2-software-interfaces)
 - [3. Critical Parts](#3-critical-parts)
 - [4. How to Use](#4-how-to-use)
 
@@ -15,46 +15,31 @@ This project enables remote firmware updates (FOTA) using ESP32, STM32F103, and 
 
 This project facilitates firmware updates over-the-air (FOTA) for an STM32F103 microcontroller using an ESP32 and Google Firebase. Key components include WiFi connectivity, Firebase authentication, and MQTT communication.
 
-## 2. Functions
+## 2. Software Interfaces
 
-### `Read64byte(char *Host)`
+This section provides an overview of the primary functions and interfaces used in this project.
 
-- **Purpose**: Reads 64 bytes from a file and prepares a packet for sending to the STM32.
-- **Hint**: Utilizes a file object to read and process data for firmware updates.
+### MQTT Callback
 
-### `callback(char* topic, byte* payload, unsigned int length)`
-
+- **Function**: `callback(char* topic, byte* payload, unsigned int length)`
 - **Purpose**: Handles incoming MQTT messages.
 - **Hint**: Parses MQTT topic and payload to trigger actions based on received messages.
 
-### `fcsDownloadCallback(FCS_DownloadStatusInfo info)`
+### Firebase Storage Callback
 
+- **Function**: `fcsDownloadCallback(FCS_DownloadStatusInfo info)`
 - **Purpose**: Callback function for Firebase Storage downloads.
 - **Hint**: Provides status updates during file downloads from Firebase Storage.
 
-### `Bootloader_Jump_To_Application()`
+### Application Jump
 
+- **Function**: `Bootloader_Jump_To_Application()`
 - **Purpose**: Jumps to the main application in the STM32.
 - **Hint**: Resets and initiates the main application.
 
-### `Bootloader_Erase_Flash(uint8_t *Host_Buffer)`
-
-- **Purpose**: Initiates erasing of flash memory.
-- **Hint**: Receives erase command from the host and performs flash memory erasure.
-
-### `Bootloader_Memory_Write(uint8_t *Host_Buffer)`
-
-- **Purpose**: Writes data to flash memory.
-- **Hint**: Receives data from the host and writes it to flash memory. Address verification and CRC checks are performed.
-
-### `Bootloader_CRC_Verify(uint8_t *pData, uint32_t Data_Len, uint32_t Host_CRC)`
-
-- **Purpose**: Verifies data integrity using CRC.
-- **Hint**: Calculates the CRC of received data and compares it with the CRC sent by the host.
-
----
-
 ## 3. Critical Parts
+
+This section highlights key components and functionalities in the code.
 
 ### Firebase Integration
 
@@ -80,14 +65,6 @@ This project facilitates firmware updates over-the-air (FOTA) for an STM32F103 m
     ```
 - **Explanation**: Initiates the firmware download process from Firebase Storage.
 
-### Main Application Jump
-
-- **Code**: 
-    ```cpp
-    Bootloader_Jump_To_Application();
-    ```
-- **Explanation**: Transitions to the main application code in the STM32.
-
 ### Flash Memory Erasure
 
 - **Code**: 
@@ -104,9 +81,9 @@ This project facilitates firmware updates over-the-air (FOTA) for an STM32F103 m
     ```
 - **Explanation**: Writes data to flash memory, including address verification and CRC checks.
 
----
-
 ## 4. How to Use
+
+Follow these steps to use this project:
 
 1. Set up your WiFi credentials, API Key, and Firebase user credentials.
 2. Ensure the STM32 is ready to receive firmware updates via the provided bootloader.
@@ -116,4 +93,3 @@ This project facilitates firmware updates over-the-air (FOTA) for an STM32F103 m
 For detailed information on each function, refer to the code comments.
 
 For more details on the bootloader functions, please refer to the code comments and their respective hints provided above.
-
