@@ -1,6 +1,6 @@
-# FOTA Project with ESP32 and STM32F103
+# FOTA Project with ESP8266 and STM32F103
 
-This project enables remote firmware updates (FOTA) using ESP32, STM32F103, and Google Firebase. The ESP32 connects to WiFi, downloads the bootloader and firmware code, and communicates with the STM32.
+This project enables remote firmware updates (FOTA) using ESP8266, STM32F103, and Google Firebase. The ESP8266 connects to WiFi, downloads the bootloader and firmware code, and communicates with the STM32.
 
 ## Table of Contents
 
@@ -13,7 +13,14 @@ This project enables remote firmware updates (FOTA) using ESP32, STM32F103, and 
 
 ## 1. Introduction
 
-This project facilitates firmware updates over-the-air (FOTA) for an STM32F103 microcontroller using an ESP32 and Google Firebase. Key components include WiFi connectivity, Firebase authentication, and MQTT communication.
+This project facilitates firmware updates over-the-air (FOTA) for an STM32F103 microcontroller using an ESP8266 and Google Firebase. Key components include WiFi connectivity, Firebase authentication, and MQTT communication.
+
+
+<div style="text-align: right; padding-right: 30px;">
+  <img src="./ESP8266/Supplymentary/digram.jpg" alt="digram Image" width="800">
+</div>
+
+
 
 ## 2. Software Interfaces
 
@@ -81,13 +88,20 @@ This section highlights key components and functionalities in the code.
     ```
 - **Explanation**: Writes data to flash memory, including address verification and CRC checks.
 
+---
+Here's how to flash the code and clear it:
+- GUI.
+<div style="text-align: right; padding-right: 30px;">
+  <img src="./ESP8266/Supplymentary/GUI.jpg" alt="GUI Image" width="600">
+</div>
+
 ## 4. How to Use
 
 Follow these steps to use this project:
 
 1. Set up your WiFi credentials, API Key, and Firebase user credentials.
 2. Ensure the STM32 is ready to receive firmware updates via the provided bootloader.
-3. Flash the ESP32 with this code.
+3. Flash the ESP8266 with this code.
 4. Run the code and monitor the serial output for progress updates.
 
 For detailed information on each function, refer to the code comments.
