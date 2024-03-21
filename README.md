@@ -99,15 +99,4 @@ Here's how to flash the code and clear it:
   <img src="./ESP8266/Supplymentary/GUI.jpg" alt="GUI Image" width="600">
 </div>
 
-## 4. How to Use
 
-Follow these steps to use this project:
-
-1. Set up your WiFi credentials, API Key, and Firebase user credentials.
-2. Ensure the STM32 is ready to receive firmware updates via the provided bootloader.
-3. Flash the ESP8266 with this code.
-4. Run the code and monitor the serial output for progress updates.
-
-For detailed information on each function, refer to the code comments.
-
-For more details on the bootloader functions, please refer to the code comments and their respective hints provided above.
